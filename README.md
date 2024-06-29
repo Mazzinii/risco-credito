@@ -1,4 +1,4 @@
-# Front/Backend de um Banco Online com Previsão de Risco de Crédito
+# Front/Back-end de um Banco Online com Previsão de Risco de Crédito
 
 ## Objetivos
 
@@ -6,41 +6,34 @@ Entregar um site do gênero bancário, fictício, que permite o acesso e cadastr
 
 ## Entregáveis
 
-- **Front/Backend do Site**
-  - Página inicial
-  - Cadastro e Login
-  - Página do cliente
+- **Front/Back-end do Site**
+  - Página:
+    - inicial
+    - de Cadastro e Login
+    - de Perfil do cliente
+    - com relatório para a gestão
   - Perfis de acesso ao banco de dados
   - Perfis de acesso às páginas do site
-  - Página com um relatório para a gestão
 - **Previsão do Risco de Crédito**
+  - Análise Exploratória de Dados
   - Modelagem
-  - Feature Importance
-  - Feature Scaling
-  - Validação Cruzada
-  - Tunagem de Hiperparâmetros
+    - Feature Importance & Scaling
+    - Validação Cruzada
+    - Tunagem de Hiperparâmetros
   - Deploy de Modelo para Previsão de Risco de Crédito
   - Impacto do modelo no contexto de negócio
    
 ## Apêndice
 
+- Entendimento do Contexto de Negócio
 - Desenvolvimento Frontend
 - Desenvolvimento Backend
-- Entendimento do Contexto de Negócio
 - Análise Exploratória de Dados
 - Perguntas Relevantes de Negócio
 - Modelo de Machine Learning
 - Tunagem de Hiperparâmetros
 - Análise de Negócio
 - Desafios Relevantes encontrados
-
-## Desenvolvimento Frontend
-
-.
-
-## Desenvolvimento Backend
-
-.
 
 ## Entendimento do Contexto de Negócio
 
@@ -50,6 +43,15 @@ Entregar um site do gênero bancário, fictício, que permite o acesso e cadastr
   - O que é um empréstimo
   - Quais os tipos de agências bancárias e como essa maneira de gerir afeta o risco de crédito oferecido por um banco online
   - ...**inserir mais tópicos interessantes de contextualização de negócio**...
+
+
+## Desenvolvimento Front-end
+
+.
+
+## Desenvolvimento Back-end
+
+.
 
 ## Análise Exploratória de Dados
 
@@ -120,10 +122,12 @@ Entregar um site do gênero bancário, fictício, que permite o acesso e cadastr
   - F1 Score
   - ROC AUC Score
 
-Inserir um ou dois exemplos do benefício de aplicação do modelo de ML no contexto de negócio
+Inserir um ou dois exemplos do benefício de aplicação do modelo de ML no contexto de negócio visando lucro.
 
 ## Desafios Relevantes encontrados
 
-- Problema: transformar o banco de dados de `.csv` -> `.sql` ou `.db`.
+- Problema: transformar o banco de dados de `.csv` para `.sql` ou `.db`.
   - Solução: código em Python da library Pandas executa a transformação.
 - Problema: encontrar um bom banco de dados para o problema de risco de crédito.
+- Problema: integrar o modelo de ML para prever através da lib FastAPI e Pickle com o site
+- ...
