@@ -2,7 +2,7 @@
 
 ## Objetivos
 
-Entregar um site do gênero bancário, fictício, que permite o acesso e cadastro de clientes, visualização do empréstimo que possuem direito e saldo. Adicionalmente, existirá perfis de acesso onde a gestão poderá visualizar o impacto no negócio da implementação de um modelo de machine learning que prevê o risco de crédito dos clientes.
+Entregar um site do gênero bancário, fictício, que permite o acesso e cadastro de clientes, visualização do empréstimo que possuem direito e saldo. Adicionalmente, existirá perfis de acesso onde a gestão poderá visualizar diretamente no site o impacto no negócio da implementação de um modelo de machine learning que prevê o risco de crédito dos clientes.
 
 ## Entregáveis
 
