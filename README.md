@@ -7,21 +7,22 @@ Entregar um site do gênero bancário, fictício, que permite o acesso e cadastr
 ## Entregáveis
 
 - **Front/Back-end do Site**
-  - Página:
+  - **Página**:
     - inicial
     - de Cadastro e Login
     - de Perfil do cliente
     - com relatório para a gestão
-  - Perfis de acesso ao banco de dados
-  - Perfis de acesso às páginas do site
+  - **Perfis de acesso**:
+    - ao banco de dados
+    - às páginas do site
 - **Previsão do Risco de Crédito**
-  - Análise Exploratória de Dados
-  - Modelagem
+  - **Análise Exploratória de Dados**
+  - **Modelagem**
     - Feature Importance & Scaling
     - Validação Cruzada
     - Tunagem de Hiperparâmetros
-  - Deploy de Modelo para Previsão de Risco de Crédito
-  - Impacto do modelo no contexto de negócio
+    - Deploy de Modelo para Previsão de Risco de Crédito
+    - Impacto do modelo no contexto de negócio
    
 ## Apêndice
 
@@ -96,7 +97,13 @@ Entregar um site do gênero bancário, fictício, que permite o acesso e cadastr
   - accuracy_score
   - confusion_matrix 
   - classification_report
-  
+    - Score Cross Validation
+    - Average Precision
+    - Precision Score
+    - Recall Score
+    - F1 Score
+    - ROC AUC Score 
+    
 ### Importância das Features (maior para menor – 10 primeiras)
 
 - Descrever como chegou à conclusão da Feature Engineering
