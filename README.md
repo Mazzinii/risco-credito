@@ -45,14 +45,15 @@ Entregar um site do gênero bancário, fictício, que permite o acesso e cadastr
   - Quais os tipos de agências bancárias e como essa maneira de gerir afeta o risco de crédito oferecido por um banco online
   - ...**inserir mais tópicos interessantes de contextualização de negócio**...
 
-
 ## Desenvolvimento Front-end
 
-.
+- Tecnologias utilizadas:
+  - .
 
 ## Desenvolvimento Back-end
 
-.
+- Tecnologias utilizadas:
+  - .
 
 ## Análise Exploratória de Dados
 
