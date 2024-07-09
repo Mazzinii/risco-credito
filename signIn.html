@@ -1,0 +1,71 @@
+<?php
+   //verificando se o submit existe (só é acionado quando clicado em enviar)    
+   if(isseT($_POST['submit'])) // 
+   {
+      //incluindo as config da aba conexao.php
+      include_once('conexao.php');
+
+      // definindo variaveis com os campos input pelo id
+      $nome = $_POST['nome'];
+      $nasc = $_POST['nasc'];
+      $email = $_POST['email'];
+      $senha = $_POST['senha'];
+
+      //adicioando as variveis em seus respectivos lugares no banco de dados
+      $result = mysqli_query($mysqli, "INSERT INTO login(nome,data_nasc,email,senha) VALUES ('$nome','$nasc','$email','$senha')");
+   }
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Risco-Credito</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <p>LOGO</p>
+      </nav>
+    </header>
+    <section class="mainpage2 signIn">
+      <div class="right rsignin">
+        <h1>
+          Preencha todos os campos ao lado com os dados pedidos para efetuar o
+          cadastro.
+        </h1>
+      </div>
+      <div class="left lsignin">
+        <form action="signIn.php" method="POST">
+          <div class="inputbox">
+            <input type="text" name="nome" id="nome" class="inputUser" required />
+            <label for="nome" class="labelinput">Nome</label>
+          </div>
+          <div class="inputbox">
+            <input type="email" name="email" id="email" class="inputUser" required />
+            <label for="email" class="labelinput">E-mail</label>
+          </div>
+          <div class="inputbox">
+              <label for="nasc" >Data de Nascimento</label>
+              <br>
+             <input type="date" name="nasc" id="nasc" required />
+          </div>
+          <div class="inputbox">
+            <input type="password" name="senha" class="inputUser" id="senha" required />
+            <label for="senha" class="labelinput">Senha</label>
+          </div>
+          <div class="inputbox">
+            <input type="password" name="confirmsenha" class="inputUser" required />
+            <label for="confirmsenha" class="labelinput">Confirmar Senha</label>
+          </div>
+          <div class="textlogin"><p>ou se ja possuir uma conta <a href="">Login</a></p></div>
+          <div class="buttonForm"><input type="submit" name="submit" class="buttonSubmit"></input></div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
