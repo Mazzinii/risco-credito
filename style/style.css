@@ -15,7 +15,7 @@ body {
 }
 /* --------COR/TAMANHO------  */
 p {
-  text-align: justify;
+  text-align: left;
 }
 /* --------Navegação------  */
 .header {
@@ -59,7 +59,7 @@ p {
 /* --------MainPage------  */
 
 .mainpage {
-  background-image: url(./imagens/mainpage.jpg);
+  background-image: url(/imagens/mainpage.jpg);
   height: 100vh;
 
   & .mainpage-content {
@@ -204,12 +204,86 @@ p {
           font-size: 1.6rem;
           font-weight: 600;
         }
-
-        & .cadastroOk {
-          color: green;
+        & .errorEmail {
+          color: red;
           font-size: 1.6rem;
           font-weight: 600;
         }
+      }
+    }
+
+    & .buttonForm {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & .buttonSubmit {
+        width: 100%;
+        padding: 1rem 5rem 3rem 5rem;
+        border-radius: 1rem;
+        background-color: #eeeeee;
+        border: 2px solid lightgray;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* --------LogIn------  */
+.login {
+  & .left {
+    height: 100vh;
+
+    & h1 {
+      width: calc(100vw / 2.5);
+      font-size: 3.5rem;
+    }
+  }
+
+  & .right {
+    gap: 10rem;
+    height: 100vh;
+
+    & form {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      & .inputbox {
+        position: relative;
+      }
+
+      & input {
+        width: 350px;
+        height: 30px;
+        padding: 0.2rem 1rem;
+        font-size: 1.6rem;
+        background-color: #eeeeee;
+        border: none;
+        outline: none;
+        box-shadow: 0px 0px 20px -18px;
+      }
+
+      & .labelinput {
+        position: absolute;
+        top: 7px;
+        left: 3px;
+        font-size: 1.8rem;
+        pointer-events: none;
+        transition: 0.5s;
+      }
+
+      & .inputUser:focus ~ .labelinput,
+      & .inputUser:valid ~ .labelinput {
+        top: -20px;
+      }
+
+      & .textlogin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
       }
 
       & .buttonForm {

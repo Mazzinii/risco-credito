@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style/style.css" />
     <script src="scriptlogin.js" defer></script>
     <title>Risco-Credito</title>
   </head>
@@ -13,14 +13,14 @@
         <p>LOGO</p>
       </nav>
     </header>
-    <section class="mainpage2 signIn">
-      <div class="right rsignin">
+    <section class="mainpage2 login">
+      <div class="left rsignin">
         <h1>
           Preencha todos os campos com os dados que já foram cadastrados.
         </h1>
       </div>
-      <div class="left lsignin">
-        <form action="testlogin.php" method="POST" onsubmit="loginAdm(event)">
+      <div class="right llogin">
+        <form action="testlogin.php" method="POST">
           
           <div class="inputbox">
             <input type="email" name="email" id="email" class="inputUser" required />
@@ -29,10 +29,6 @@
           <div class="inputbox">
             <input type="password" name="senha" class="inputUser" id="senha" required />
             <label for="senha" class="labelinput">Senha</label>
-          </div>
-          <div class="textlogin">
-            <p class="errorSenha"></p>
-            <p class="cadastroOk"></p>
           </div>
           <div class="buttonForm"><input type="submit" name="submit"  class="buttonSubmit"></input></div>
         </form>
