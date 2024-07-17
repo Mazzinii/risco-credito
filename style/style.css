@@ -184,7 +184,7 @@ p {
       }
 
       & .inputUser:focus ~ .labelinput,
-      & .inputUser:valid ~ .labelinput {
+      .inputUser:valid ~ .labelinput {
         top: -20px;
       }
 
@@ -284,6 +284,12 @@ p {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
+        & .errorWrongInput {
+          color: red;
+          font-size: 1.6rem;
+          font-weight: 600;
+        }
       }
 
       & .buttonForm {
@@ -320,7 +326,23 @@ p {
     font-size: 2rem;
   }
 }
-.home {
-  margin-top: 10rem;
-  text-align: center;
+.login {
+  & .right {
+    & h1 {
+      font-size: 2.2rem;
+    }
+  }
+
+  .inputHome {
+    width: 100%;
+    background-color: #eeeeee;
+    border: none;
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .saldo {
+    display: flex;
+    justify-content: center;
+  }
 }

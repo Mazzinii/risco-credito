@@ -15,13 +15,13 @@
       </nav>
     </header>
     <section class="mainpage2 signIn">
-      <div class="left ">
+      <div class="left lsignin">
         <h1>
           Preencha todos os campos ao lado com os dados pedidos para efetuar o
           cadastro.
         </h1>
       </div>
-      <div class="right ">
+      <div class="right rsignin">
         <form action="signin.php" method="POST" onsubmit="verfSenha(event)">
           <div class="inputbox">
             <input type="text" name="nome" id="nome" class="inputUser" required />
@@ -47,7 +47,7 @@
           <div class="textlogin">
             <p>ou se ja possuir uma conta <a href="/login/login.html">Login</a></p>
             <p class="errorSenha"></p>
-            <p class="errorEmail"></p>
+            <p class="errorEmail">Você não possui a idade mínima para prosseguir.</p>
           </div>
           <div class="buttonForm"><input type="submit" name="submit" class="buttonSubmit"></input></div>
         </form>

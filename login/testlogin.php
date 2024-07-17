@@ -14,8 +14,9 @@ session_start();
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         
+        // fazer a pesquisa no banco de dados com bind variables para previnir sql injection
         //definindo a var que vai fazer a pesquisa no banco de dados
-        $sql = "SELECT * FROM login WHERE email = '$email' LIMIT 1";
+        $sql = "SELECT * FROM login WHERE email = '$email' LIMIT 1";  
 
         // executando pesquisa no banco de dados 
         $result = $mysqli->query($sql);
@@ -27,23 +28,20 @@ session_start();
             unset($_SESSION['email']);
             unset($_SESSION['senha']);
             // se nao exixtir o usuario vai permanecer na mesma pagina
-            header('Location:login.html');
+            header('Location:wrongLogin.html');
             
-
         }elseif(password_verify($senha,$usuario['senha'])) {
             //se existir o usuario vai ser redirecionado para a pagina principal
             $_SESSION['email'] = $email;
             $_SESSION['senha'] = $senha;
             header('Location: ../home/home.php');
+        }else{
+            header('Location:wrongLogin.html');
         }
 
 
 
     }
-    else{
-        // não acessa
-        header('Location:login.html');
 
-    }
 
 ?>

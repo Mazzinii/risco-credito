@@ -14,12 +14,12 @@
       </nav>
     </header>
     <section class="mainpage2 login">
-      <div class="left ">
+      <div class="left rsignin">
         <h1>
           Preencha todos os campos com os dados que já foram cadastrados.
         </h1>
       </div>
-      <div class="right">
+      <div class="right llogin">
         <form action="testlogin.php" method="POST">
           
           <div class="inputbox">
@@ -29,6 +29,9 @@
           <div class="inputbox">
             <input type="password" name="senha" class="inputUser" id="senha" required />
             <label for="senha" class="labelinput">Senha</label>
+          </div>
+          <div class="textlogin">
+            <p class="errorWrongInput">Email ou senha incorretos</p>
           </div>
           <div class="buttonForm"><input type="submit" name="submit"  class="buttonSubmit"></input></div>
         </form>
