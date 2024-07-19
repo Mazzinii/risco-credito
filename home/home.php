@@ -19,11 +19,10 @@
     $senha = $_SESSION['senha'];
 
 
-    $sql = "SELECT nome  FROM login WHERE email = '$email'";
+    $sql = "SELECT nome FROM login WHERE email = '$email'";
 
     $result = $mysqli->query($sql);
     
-
     if ($result->num_rows > 0) {
         //se houver resultados, obter o nome do primeiro (e único, no caso de ID único) resultado
         //recuperando o nome com o método fetch_assoc()
@@ -32,6 +31,7 @@
     }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -52,13 +52,14 @@
         <div class="left">
         <?php echo "<h1>Bem vindo $nome, preencha os dados obrigatórios para efetuar a análise de crédito  </h1>"
        ?>
+        <div class="homeImg"><img src="/imagens/Home.jpg" alt="guardando dinheiro em um cofre" ></div>
         </div>
         <div class="right">
           <form action="Analise.php" method="POST">
             
             <div class="inputbox">
                 <label for="residencia"><h1>Tipo de residência</h1></label>
-                <select name="residencia" id="residencia" class="inputhome" required>
+                <select name="residencia" id="residencia" class="inputHome" required>
                     <option value="Propria">Própria</option>
                     <option value="Hipoteca">Hipoteca</option>
                     <option value="Alugada">Alugada</option>
@@ -67,11 +68,7 @@
             </div>
             <div class="inputbox">
                 <label for="anosTrabalhados" ><h1>Anos Trabalhados</h1></label>
-                <select name="anosTrabalhados" id="anosTrabalhados" class="inputhome" required>
-                    <option value="0-10">0-10 Anos</option>
-                    <option value="10-20">10-20 Anos</option>
-                    <option value="30-40">30-40 Anos</option>
-                </select>             
+                <input type="number" name="anosTrabalhados" id="anosTrabalhados">          
             </div>
             <div class="inputbox">
                 <label for="rendaAnual"><h1>Renda Anual</h1>

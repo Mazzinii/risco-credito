@@ -13,8 +13,8 @@ session_start();
         //declarando as variaveis
         $email = $_POST['email'];
         $senha = $_POST['senha'];
+
         
-        // fazer a pesquisa no banco de dados com bind variables para previnir sql injection
         //definindo a var que vai fazer a pesquisa no banco de dados
         $sql = "SELECT * FROM login WHERE email = '$email' LIMIT 1";  
 
@@ -23,7 +23,12 @@ session_start();
 
         $usuario =$result->fetch_assoc();
 
-        if(mysqli_num_rows($result) < 1) {
+        //Permitindo login do adm
+        if($email  == 'adm@gmail.com' && $senha == '2024@'){
+            echo "login do ADM feito com sucesso";
+        }
+
+        elseif(mysqli_num_rows($result) < 1) {
             //destruindo qualquer sessao
             unset($_SESSION['email']);
             unset($_SESSION['senha']);

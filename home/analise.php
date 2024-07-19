@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
 
     //declarando a variavel que vai preparar a consulta
     $stmt = $mysqli->prepare($sql);
-
+    
     if($stmt){
         //vinculando parametros
         $stmt->bind_param("ssii",$residencia,$anosTrabalhados,$rendaAnual,$emprestimo);

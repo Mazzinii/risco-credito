@@ -14,7 +14,7 @@
         echo "Falha ao conectar ao banco de dados: " . $mysqli->connect_error;
     }
     else 
-        echo "Conectado ao Banco de Dados";
+        
     
 
 
