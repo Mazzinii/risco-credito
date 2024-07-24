@@ -6,6 +6,7 @@ html {
 
   & a {
     text-decoration: none;
+    color: inherit;
   }
 }
 body {
@@ -119,7 +120,7 @@ p {
     height: 90vh;
     background-color: #f6f6f6;
 
-    & img {
+    & .imgMainpage2 {
       width: calc(100vw / 2.5);
       border-radius: 3rem;
     }
@@ -154,77 +155,90 @@ p {
     gap: 10rem;
     height: 100vh;
 
-    & form {
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
+    & .containerSignin {
+      position: relative;
+      border: 1px solid rgba(0, 0, 0, 0.205);
+      padding: 5rem 10rem 3rem 10rem;
+      border-radius: 2rem;
 
-      & .inputbox {
-        position: relative;
-      }
-
-      & input {
-        width: 350px;
-        height: 30px;
-        padding: 0.2rem 1rem;
-        font-size: 1.6rem;
-        background-color: #eeeeee;
-        border: none;
-        outline: none;
-        box-shadow: 0px 0px 20px -18px;
-      }
-
-      & .labelinput {
+      & .textSignin {
+        background-color: #f6f6f6;
+        padding: 0 0.5rem;
         position: absolute;
-        top: 7px;
-        left: 3px;
-        font-size: 1.8rem;
-        pointer-events: none;
-        transition: 0.5s;
+        top: -38px;
+        left: 20px;
+      }
+      & form {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        & .inputbox {
+          position: relative;
+        }
+
+        & input {
+          width: 350px;
+          height: 30px;
+          padding: 0.2rem 1rem;
+          font-size: 1.6rem;
+          background-color: #eeeeee;
+          border: none;
+          outline: none;
+          box-shadow: 0px 0px 20px -18px;
+        }
+
+        & .labelinput {
+          position: absolute;
+          top: 7px;
+          left: 3px;
+          font-size: 1.8rem;
+          pointer-events: none;
+          transition: 0.5s;
+        }
+
+        & .inputUser:focus ~ .labelinput,
+        .inputUser:valid ~ .labelinput {
+          top: -20px;
+        }
+
+        & .textlogin {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+
+          & a {
+            font-weight: 600;
+            color: inherit;
+          }
+
+          & .errorSenha {
+            color: red;
+            font-size: 1.6rem;
+            font-weight: 600;
+          }
+          & .errorEmail {
+            color: red;
+            font-size: 1.6rem;
+            font-weight: 600;
+          }
+        }
       }
 
-      & .inputUser:focus ~ .labelinput,
-      .inputUser:valid ~ .labelinput {
-        top: -20px;
-      }
-
-      & .textlogin {
+      & .buttonForm {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
 
-        & a {
+        & .buttonSubmit {
+          width: 60%;
+          padding: 1rem 5rem 3rem 5rem;
+          border-radius: 1rem;
+          background-color: #eeeeee;
+          border: 2px solid lightgray;
           font-weight: 600;
-          color: inherit;
+          cursor: pointer;
         }
-
-        & .errorSenha {
-          color: red;
-          font-size: 1.6rem;
-          font-weight: 600;
-        }
-        & .errorEmail {
-          color: red;
-          font-size: 1.6rem;
-          font-weight: 600;
-        }
-      }
-    }
-
-    & .buttonForm {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      & .buttonSubmit {
-        width: 100%;
-        padding: 1rem 5rem 3rem 5rem;
-        border-radius: 1rem;
-        background-color: #eeeeee;
-        border: 2px solid lightgray;
-        font-weight: 600;
-        cursor: pointer;
       }
     }
   }
@@ -254,6 +268,23 @@ p {
   & .right {
     gap: 10rem;
     height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    & .containerLogin {
+      position: relative;
+      border: 1px solid rgba(0, 0, 0, 0.205);
+      padding: 5rem 10rem 3rem 10rem;
+      border-radius: 2rem;
+
+      & .textLogin {
+        background-color: #f6f6f6;
+        padding: 0 0.5rem;
+        position: absolute;
+        top: -32px;
+        left: 20px;
+      }
+    }
 
     & form {
       display: flex;
@@ -265,9 +296,9 @@ p {
       }
 
       & input {
-        width: 350px;
+        width: 100%;
+        margin-right: 5rem;
         height: 30px;
-        padding: 0.2rem 1rem;
         font-size: 1.6rem;
         background-color: #eeeeee;
         border: none;
@@ -305,11 +336,11 @@ p {
       & .buttonForm {
         display: flex;
         justify-content: center;
-        align-items: center;
 
         & .buttonSubmit {
-          width: 100%;
-          padding: 1rem 5rem 3rem 5rem;
+          width: 50%;
+          margin-right: 0;
+          padding: 1rem 2rem 3rem 2rem;
           border-radius: 1rem;
           background-color: #eeeeee;
           border: 2px solid lightgray;
@@ -320,7 +351,7 @@ p {
     }
   }
 }
-/* --------HomePage------  */
+/* --------HomePage/Profile------  */
 .button-exit {
   padding: 0.7rem 1.8rem;
   border-radius: 0.8rem;
@@ -343,27 +374,100 @@ p {
   justify-content: center;
 
   & img {
-    width: calc(100vw / 5);
+    width: 400px;
     border-radius: 3rem;
   }
 }
 .login {
+  .containerInput {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+    padding: 2rem 5rem;
+    border-radius: 2rem;
+
+    & .profile {
+      background-color: #f6f6f6;
+      padding: 0 0.5rem;
+      position: absolute;
+      top: -32px;
+      left: 20px;
+    }
+
+    & form {
+      gap: 1rem;
+    }
+
+    & .profileData {
+      display: flex;
+      flex-direction: column;
+
+      & h1 {
+        margin-bottom: 1rem;
+      }
+
+      & p {
+        margin: 0;
+        padding: 0.5rem;
+        background-color: #eeeeee;
+      }
+    }
+
+    & .profileSaldo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+
+      & h1 {
+        padding: 0.5rem;
+        background-color: #eeeeee;
+      }
+    }
+    & .buttons {
+      display: flex;
+      gap: 5rem;
+      justify-content: center;
+
+      & h1 {
+        font-size: 1.6rem;
+        padding: 1rem;
+        background-color: #eeeeee;
+        border-radius: 0.8rem;
+        border: 2px solid lightgray;
+        cursor: pointer;
+      }
+    }
+  }
   & .right {
     & h1 {
       font-size: 2.2rem;
     }
   }
-
+  .inputbox {
+    & input {
+      width: 100%;
+    }
+  }
   .inputHome {
-    width: 100%;
+    width: 350px;
     background-color: #eeeeee;
     border: none;
     padding: 1rem;
     font-size: 1.6rem;
   }
-
-  .saldo {
+  .buttonProfile {
     display: flex;
-    justify-content: center;
+    align-items: center;
+
+    & .buttonSubmitProfile {
+      width: 100%;
+      margin-right: 0;
+      padding: 1rem 2rem 3rem 2rem;
+      border-radius: 1rem;
+      background-color: #eeeeee;
+      border: 2px solid lightgray;
+      font-weight: 600;
+      cursor: pointer;
+    }
   }
 }

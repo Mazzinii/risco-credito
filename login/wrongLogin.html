@@ -20,21 +20,24 @@
         </h1>
       </div>
       <div class="right llogin">
-        <form action="testlogin.php" method="POST">
-          
-          <div class="inputbox">
-            <input type="email" name="email" id="email" class="inputUser" required />
-            <label for="email" class="labelinput">E-mail</label>
-          </div>
-          <div class="inputbox">
-            <input type="password" name="senha" class="inputUser" id="senha" required />
-            <label for="senha" class="labelinput">Senha</label>
-          </div>
-          <div class="textlogin">
-            <p class="errorWrongInput">Email ou senha incorretos</p>
-          </div>
-          <div class="buttonForm"><input type="submit" name="submit"  class="buttonSubmit"></input></div>
-        </form>
+        
+        <div class="containerLogin">
+          <h1 class="textLogin">Login</h1>
+          <form action="testlogin.php" method="POST">
+            <div class="inputbox">
+              <input type="email" name="email" id="email" class="inputUser" required />
+              <label for="email" class="labelinput">E-mail</label>
+            </div>
+            <div class="inputbox">
+              <input type="password" name="senha" class="inputUser" id="senha" required />
+              <label for="senha" class="labelinput">Senha</label>
+            </div>
+            <div class="textlogin">
+              <p class="errorWrongInput">Email ou senha incorretos</p>
+            </div>
+            <div class="buttonForm"><input type="submit" name="submit"  class="buttonSubmit"></input></div>
+          </form>
+        </div>
       </div>
     </section>
   </body>

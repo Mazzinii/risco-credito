@@ -19,15 +19,24 @@
     $senha = $_SESSION['senha'];
 
 
-    $sql = "SELECT nome FROM login WHERE email = '$email'";
+    $sql = "SELECT nome, idade FROM login WHERE email = '$email'";
 
     $result = $mysqli->query($sql);
     
     if ($result->num_rows > 0) {
+
         //se houver resultados, obter o nome do primeiro (e único, no caso de ID único) resultado
+
         //recuperando o nome com o método fetch_assoc()
         $usuario = $result->fetch_assoc();
+
+        //pegando o nome do usuario da tabela
         $nome = $usuario["nome"];
+
+        //pegando a idade do usuario da tabela
+        $idade = $usuario["idade"];
+
+
     }
 
 ?>
@@ -50,38 +59,37 @@
       </header>
       <section class="mainpage2 login ">
         <div class="left">
-        <?php echo "<h1>Bem vindo $nome, preencha os dados obrigatórios para efetuar a análise de crédito  </h1>"
-       ?>
+        <?php echo "<h1>Bem vindo $nome, esta é a sua área de Perfil. </h1>"?>
         <div class="homeImg"><img src="/imagens/Home.jpg" alt="guardando dinheiro em um cofre" ></div>
         </div>
         <div class="right">
-          <form action="Analise.php" method="POST">
-            
-            <div class="inputbox">
-                <label for="residencia"><h1>Tipo de residência</h1></label>
-                <select name="residencia" id="residencia" class="inputHome" required>
-                    <option value="Propria">Própria</option>
-                    <option value="Hipoteca">Hipoteca</option>
-                    <option value="Alugada">Alugada</option>
-                    <option value="Outro">Outro tipo de posse</option>
-                </select>
+            <div class="containerInput">
+                <h1 class="profile">Meu Perfil</h1>
+                <form action="updateName.php" method="POST" >
+                    <div class="profileData">
+                        <h1>Nome</h1>
+                        <input type="text" name="nomeHome" id="nomeHome" placeholder="<?php echo $nome?>">
+                    </div>
+                    <div class="profileData">
+                        <h1>Idade</h1>
+                        <?php echo "<p>$idade anos </p>"?>
+                    </div>
+                    <div class="ProfileData">
+                        <h1>Email</h1>
+                        <?php echo "<p>$email</p>"?>
+                    </div>
+                    <div class="profileSaldo">
+                        <h1>Saldo: R$ 0,00</h1>
+                    </div>
+                    <div class="buttons">
+                        <a href="Profile.php">
+                            <h1>Dados Bancários</h1>
+                        </a>
+                        <div class="buttonProfile"><input   type="submit" name="submit"  class="buttonSubmitProfile" value="Editar"></input></div>
+                    </div>
+                </form>
+                </div>
             </div>
-            <div class="inputbox">
-                <label for="anosTrabalhados" ><h1>Anos Trabalhados</h1></label>
-                <input type="number" name="anosTrabalhados" id="anosTrabalhados">          
-            </div>
-            <div class="inputbox">
-                <label for="rendaAnual"><h1>Renda Anual</h1>
-                 <input type="number" name="rendaAnual" id="rendaAnual" required>   
-            </div>
-            <div class="inputbox">
-                <label for="emprestimo"><h1>Valor do Empréstimo</h1>
-                 <input type="number" name="emprestimo" id="emprestimo" required>   
-            </div>
-            <div class="saldo">
-                <h1>Saldo: R$ 0,00</h1>
-            </div>
-            <div class="buttonForm"><input type="submit" name="submit"  class="buttonSubmit" value="Fazer Análise"></input></div>
           </form>
         </div>
       </section>
