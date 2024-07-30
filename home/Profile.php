@@ -58,7 +58,7 @@
             <a href="/exit/exit.php"><span>Sair</span></a>
         </nav>
       </header>
-      <section class="mainpage2 login ">
+      <section class="home ">
         <div class="left">
         <?php echo "<h1>Bem vindo $nome, preencha os campos com os dados solicitados para completar o seu perfil. </h1>"
        ?>
@@ -81,15 +81,15 @@
                 </div>
                 <div class="inputbox">
                     <label for="anosTrabalhados" ><h1>Anos Trabalhados</h1></label>
-                    <input type="number" name="anosTrabalhados" id="anosTrabalhados" placeholder="<?php echo "$anosTrabalhados anos"?>" required >
+                    <input type="number" name="anosTrabalhados" id="anosTrabalhados" class="inputHome" placeholder="<?php echo "$anosTrabalhados anos"?>" required >
                 </div>
                 <div class="inputbox">
                     <label for="rendaAnual"><h1>Renda Anual</h1>
-                     <input type="number" name="rendaAnual" id="rendaAnual" placeholder="<?php echo "R$ $rendaAnual"?>" required>
+                     <input type="number" name="rendaAnual" id="rendaAnual" class="inputHome" placeholder="<?php echo "R$ $rendaAnual"?>" required>
                 </div>
                 <div class="inputbox">
                     <label for="emprestimo"><h1>Valor do Empréstimo</h1>
-                     <input type="number" name="emprestimo" id="emprestimo" placeholder="<?php echo "R$ $emprestimo"?>" required>
+                     <input type="number" name="emprestimo" id="emprestimo" class="inputHome" placeholder=" <?php echo "R$ $emprestimo"?>" required>
                 </div>
                 <div class="buttons">
                     <div class="buttonMeuperfil">

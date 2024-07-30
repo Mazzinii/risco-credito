@@ -57,7 +57,7 @@
             <a href="/exit/exit.php"><span>Sair</span></a>
         </nav>
       </header>
-      <section class="mainpage2 login ">
+      <section class="home">
         <div class="left">
         <?php echo "<h1>Bem vindo $nome, esta é a sua área de Perfil. </h1>"?>
         <div class="homeImg"><img src="/imagens/Home.jpg" alt="guardando dinheiro em um cofre" ></div>
@@ -65,16 +65,17 @@
         <div class="right">
             <div class="containerInput">
                 <h1 class="profile">Meu Perfil</h1>
+                
                 <form action="updateName.php" method="POST" >
                     <div class="profileData">
                         <h1>Nome</h1>
-                        <input type="text" name="nomeHome" id="nomeHome" placeholder="<?php echo $nome?>">
+                        <input type="text" name="nomeHome" id="nomeHome" class="inputHome" placeholder="<?php echo $nome?>">
                     </div>
                     <div class="profileData">
                         <h1>Idade</h1>
                         <?php echo "<p>$idade anos </p>"?>
                     </div>
-                    <div class="ProfileData">
+                    <div class="profileData">
                         <h1>Email</h1>
                         <?php echo "<p>$email</p>"?>
                     </div>
@@ -82,7 +83,7 @@
                         <h1>Saldo: R$ 0,00</h1>
                     </div>
                     <div class="buttons">
-                        <a href="Profile.php">
+                        <a href="profile.php">
                             <h1>Dados Bancários</h1>
                         </a>
                         <div class="buttonProfile"><input   type="submit" name="submit"  class="buttonSubmitProfile" value="Editar"></input></div>

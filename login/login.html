@@ -10,30 +10,31 @@
   <body>
     <header class="header">
       <nav class="nav">
-        <p>LOGO</p>
+        <a href="/index/index.html">
+          <p>LOGO</p>
+        </a>
       </nav>
     </header>
-    <section class="mainpage2 login">
-      <div class="left ">
+    <section class="signIn">
+      <div class="left">
         <h1>
           Preencha todos os campos com os dados que já foram cadastrados.
         </h1>
-        <div class="imgLogin"><img src="/imagens/login.jpg" alt="notebook e folhas com graficos"></div>
       </div>
       <div class="right">
-        <div class="containerLogin">
-          <h1 class="textLogin">Login</h1>
+        <div class="container login">
+          <h1 class="texto">Login</h1>
           <form action="testlogin.php" method="POST">
           
             <div class="inputbox">
               <input type="email" name="email" id="email" class="inputUser" required />
-              <label for="email" class="labelinput">E-mail</label>
+              <label for="email" class="labelinput" >E-mail</label>
             </div>
             <div class="inputbox">
               <input type="password" name="senha" class="inputUser" id="senha" required />
               <label for="senha" class="labelinput">Senha</label>
             </div>
-            <div class="buttonForm"><input type="submit" name="submit"  class="buttonSubmit"></input></div>
+            <div class="buttonForm"><input type="submit" name="submit"  class="buttonSubmit" value="Login"></input></div>
             </form>
           </div>
       </div>

@@ -11,19 +11,21 @@
   <body>
     <header class="header">
       <nav class="nav">
-        <p>LOGO</p>
+        <a href="/index/index.html">
+          <p>LOGO</p>
+        </a>
       </nav>
     </header>
-    <section class="mainpage2 signIn">
-      <div class="left ">
+    <section class="signIn">
+      <div class="left">
         <h1>
-          Preencha todos os campos ao lado com os dados pedidos para efetuar o
+          Preencha todos os campos ao lado com os dados solicitados para efetuar o
           cadastro.
         </h1>
       </div>
-      <div class="right ">
-        <div class="containerSignin">
-          <h1 class="textSignin">Cadastre-se</h1>
+      <div class="right">
+        <div class="container">
+          <h1 class="texto">Cadastre-se</h1>
           <form action="signin.php" method="POST" onsubmit="verfSenha(event)">
             <div class="inputbox">
               <input type="text" name="nome" id="nome" class="inputUser" required />
@@ -47,7 +49,7 @@
               <label for="confirmsenha" class="labelinput">Confirmar Senha</label>
             </div>
             <div class="textlogin">
-              <p>ou se ja possuir uma conta <a href="/login/login.html">Login</a></p>
+              <p>ou se ja possuir uma conta <b><a href="/login/login.html">Login</a></b></p>
               <p class="errorSenha"></p>
             </div>
             <div class="buttonForm"><input type="submit" name="submit" class="buttonSubmit" value="Cadastrar"></input></div>

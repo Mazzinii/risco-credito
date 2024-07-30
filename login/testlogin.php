@@ -25,8 +25,12 @@ session_start();
 
         //Permitindo login do adm
         if($email  == 'adm@gmail.com' && $senha == '2024@'){
-            echo "login do ADM feito com sucesso";
+            header('Location: ../home/homeAdm.html');
         }
+        elseif($email  == 'dados@gmail.com' && $senha == '2024@'){
+            header('Location: ../home/homeDados.html');
+        }
+
 
         elseif(mysqli_num_rows($result) < 1) {
             //destruindo qualquer sessao

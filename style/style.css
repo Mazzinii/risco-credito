@@ -18,6 +18,46 @@ body {
 p {
   text-align: left;
 }
+
+/* --------Section------  */
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 100vh;
+  background-color: #f6f6f6;
+
+  & h1 {
+    font-size: 2.2rem;
+  }
+}
+.left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50vw;
+  height: 100vh;
+  background-color: #eeeeee;
+}
+/* --------Container------  */
+
+.container {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.205);
+  padding: 5rem 10rem 3rem 10rem;
+  border-radius: 2rem;
+  background-color: #f6f6f6;
+
+  & .texto {
+    background-color: #f6f6f6;
+    padding: 0 0.5rem;
+    position: absolute;
+    top: -33px;
+    left: 20px;
+  }
+}
 /* --------Navegação------  */
 .header {
   position: fixed;
@@ -25,8 +65,9 @@ p {
   left: 0;
   right: 0;
   background-color: #f6f6f6;
-  padding: 0.8rem 0.6rem 0.8rem 0.6rem;
+  padding: 0.5rem 0.6rem 0.5rem 0.6rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 5px;
+  z-index: 9999;
 
   & .nav {
     display: flex;
@@ -37,7 +78,7 @@ p {
     display: flex;
     align-items: center;
     text-align: center;
-    gap: 1.5rem;
+    gap: 0.6rem;
   }
   & .button-nav {
     display: flex;
@@ -52,7 +93,7 @@ p {
       font-weight: 600;
       color: rgba(0, 0, 0, 0.774);
       text-decoration: none;
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
 }
@@ -77,7 +118,7 @@ p {
 
     & p {
       font-size: 2.6rem;
-      width: 43rem;
+      width: 41rem;
       background-color: #eeeeee;
       margin-left: 1rem;
       padding: 1rem;
@@ -90,84 +131,59 @@ p {
 .mainpage2 {
   display: flex;
 
-  & .left {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 50vw;
-    height: 90vh;
-    background-color: #eeeeee;
-
-    & h1 {
-      font-size: 3rem;
-      margin-left: 2rem;
-    }
-
-    & p {
-      font-size: 2.6rem;
-      margin-top: 0;
-      margin-left: 2rem;
-      width: calc(100vw / 2.5);
-      font-weight: 500;
-    }
-  }
-
-  & .right {
+  & .containerMainpage {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50vw;
-    height: 90vh;
-    background-color: #f6f6f6;
-
-    & .imgMainpage2 {
-      width: calc(100vw / 2.5);
-      border-radius: 3rem;
-    }
   }
+
+  & h1 {
+    font-size: 3rem;
+    margin-left: 2rem;
+  }
+
+  & p {
+    font-size: 2.6rem;
+    margin-top: 0;
+    margin-left: 2rem;
+    width: calc(100vw / 2.3);
+    font-weight: 500;
+  }
+}
+
+.imgMainpage2 {
+  max-width: 700px;
+  border-radius: 2rem;
 }
 
 /* --------Footer------  */
 
 .footer {
+  display: flex;
+  align-items: center;
   height: 10vh;
   background-color: black;
 
   & p {
     color: white;
-    margin-top: 0;
-    padding: 2rem;
+    padding: 2rem 2rem 0 2rem;
+    margin: 0;
   }
 }
 
 /* --------SignIn------  */
 .signIn {
-  & .left {
-    height: 100vh;
+  display: flex;
 
+  & .left {
     & h1 {
       width: calc(100vw / 2.5);
       font-size: 3.5rem;
+      padding-left: 2rem;
     }
   }
-
-  & .right {
-    gap: 10rem;
-    height: 100vh;
-
-    & .containerSignin {
-      position: relative;
-      border: 1px solid rgba(0, 0, 0, 0.205);
-      padding: 5rem 10rem 3rem 10rem;
-      border-radius: 2rem;
-
-      & .textSignin {
-        background-color: #f6f6f6;
-        padding: 0 0.5rem;
-        position: absolute;
-        top: -38px;
-        left: 20px;
-      }
+  .right {
+    & .container {
       & form {
         display: flex;
         flex-direction: column;
@@ -243,114 +259,17 @@ p {
     }
   }
 }
+/* --------Login------ */
 
-/* --------LogIn------  */
-.login {
-  & .left {
-    height: 100vh;
-
-    & h1 {
-      width: calc(100vw / 2.5);
-      font-size: 3.5rem;
-    }
-    & .imgLogin {
-      display: flex;
-      padding-top: 2rem;
-      justify-content: center;
-
-      & img {
-        width: calc(100vw / 5);
-        border-radius: 2rem;
-      }
-    }
-  }
-
-  & .right {
-    gap: 10rem;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-
-    & .containerLogin {
-      position: relative;
-      border: 1px solid rgba(0, 0, 0, 0.205);
-      padding: 5rem 10rem 3rem 10rem;
-      border-radius: 2rem;
-
-      & .textLogin {
-        background-color: #f6f6f6;
-        padding: 0 0.5rem;
-        position: absolute;
-        top: -32px;
-        left: 20px;
-      }
-    }
-
-    & form {
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-
-      & .inputbox {
-        position: relative;
-      }
-
-      & input {
-        width: 100%;
-        margin-right: 5rem;
-        height: 30px;
-        font-size: 1.6rem;
-        background-color: #eeeeee;
-        border: none;
-        outline: none;
-        box-shadow: 0px 0px 20px -18px;
-      }
-
-      & .labelinput {
-        position: absolute;
-        top: 7px;
-        left: 3px;
-        font-size: 1.8rem;
-        pointer-events: none;
-        transition: 0.5s;
-      }
-
-      & .inputUser:focus ~ .labelinput,
-      & .inputUser:valid ~ .labelinput {
-        top: -20px;
-      }
-
-      & .textlogin {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        & .errorWrongInput {
-          color: red;
-          font-size: 1.6rem;
-          font-weight: 600;
-        }
-      }
-
-      & .buttonForm {
-        display: flex;
-        justify-content: center;
-
-        & .buttonSubmit {
-          width: 50%;
-          margin-right: 0;
-          padding: 1rem 2rem 3rem 2rem;
-          border-radius: 1rem;
-          background-color: #eeeeee;
-          border: 2px solid lightgray;
-          font-weight: 600;
-          cursor: pointer;
-        }
-      }
-    }
+.textlogin {
+  & .errorWrongInput {
+    color: red;
   }
 }
+.login {
+  padding: 4rem;
+}
+
 /* --------HomePage/Profile------  */
 .button-exit {
   padding: 0.7rem 1.8rem;
@@ -364,7 +283,7 @@ p {
   & a {
     color: #f6f6f6;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -378,8 +297,25 @@ p {
     border-radius: 3rem;
   }
 }
-.login {
-  .containerInput {
+.home {
+  display: flex;
+
+  & .left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw;
+    height: 100vh;
+    background-color: #eeeeee;
+
+    & h1 {
+      width: calc(100vw / 2.5);
+      font-size: 3.5rem;
+      padding-left: 2rem;
+    }
+  }
+
+  & .containerInput {
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.205);
     padding: 2rem 5rem;
@@ -395,6 +331,9 @@ p {
 
     & form {
       gap: 1rem;
+    }
+    & .inputHome {
+      font-size: 1.8rem;
     }
 
     & .profileData {
@@ -438,11 +377,7 @@ p {
       }
     }
   }
-  & .right {
-    & h1 {
-      font-size: 2.2rem;
-    }
-  }
+
   .inputbox {
     & input {
       width: 100%;
@@ -460,14 +395,164 @@ p {
     align-items: center;
 
     & .buttonSubmitProfile {
+      font-size: 1.6rem;
       width: 100%;
       margin-right: 0;
-      padding: 1rem 2rem 3rem 2rem;
+      padding: 1rem 2rem 1rem 2rem;
       border-radius: 1rem;
       background-color: #eeeeee;
       border: 2px solid lightgray;
       font-weight: 600;
       cursor: pointer;
+    }
+  }
+}
+
+/* --------MediaQuery------  */
+
+/* --------Smartphones------  */
+
+@media (max-width: 750px) {
+  /* --------Mainpage------  */
+  .mainpage {
+    background-position: center;
+    & .mainpage-content {
+      padding-top: 10rem;
+      & h1 {
+        width: 30rem;
+      }
+      & p {
+        width: 28rem;
+      }
+    }
+  }
+  .mainpage2 {
+    & .left {
+      width: 100vw;
+      background-image: url(/imagens/mainpage2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding-top: 1rem;
+
+      & .containerMainpage2 {
+        display: flex;
+        flex-flow: column;
+
+        position: relative;
+        border: 1px solid rgba(0, 0, 0, 0.205);
+        background-color: #f6f6f6;
+        padding: 3rem 1.5rem;
+        margin: 1rem;
+        border-radius: 2rem;
+
+        & .textMainpage2 {
+          background-color: #f6f6f6;
+          padding: 0.5rem 1rem;
+          position: absolute;
+          top: -40px;
+          left: 20px;
+          border-radius: 1rem;
+          border-top: 1px solid rgba(0, 0, 0, 0.205);
+        }
+        & h1 {
+          margin-left: 0;
+        }
+      }
+      & p {
+        width: 100%;
+        font-size: 2rem;
+        padding-top: 1rem;
+        margin: 1rem;
+      }
+    }
+    & .right {
+      display: none;
+      & .imgMainpage2 {
+        display: none;
+      }
+    }
+  }
+  .footer {
+    padding-bottom: 2rem;
+  }
+  /* --------Signin------  */
+
+  .signIn {
+    & .left {
+      display: none;
+    }
+    & .right {
+      width: 100vw;
+      padding-top: 8rem;
+      height: 91.5vh;
+      background-image: url(/imagens/login.jpg);
+      background-position: center;
+
+      & .container {
+        padding: 4rem 2rem 4rem 2rem;
+        background-color: #f6f6f6;
+
+        & .texto {
+          border-radius: 1rem;
+          padding: 0.5rem 1rem;
+          background-color: #f6f6f6;
+          border-top: 1px solid rgba(0, 0, 0, 0.205);
+        }
+
+        & form {
+          padding-top: 2rem;
+          gap: 2.6rem;
+
+          & input {
+            width: 75vw;
+          }
+        }
+      }
+    }
+  }
+
+  /* --------Home------  */
+  .home {
+    & .left {
+      display: none;
+    }
+    & .right {
+      width: 100vw;
+      height: 91.5vh;
+      padding-top: 8rem;
+      background-image: url(/imagens/Home.jpg);
+      background-position: center;
+
+      & .containerInput {
+        background-color: #f6f6f6;
+        padding: 3rem 2rem 1rem 2rem;
+
+        & .profile {
+          border-radius: 1rem;
+          padding: 0.5rem 1rem;
+          border-top: 1px solid rgba(0, 0, 0, 0.205);
+        }
+
+        & .profileData {
+          & input {
+            width: 280px;
+          }
+          & p {
+            width: 290px;
+          }
+        }
+      }
+    }
+  }
+  & .inputHome {
+    font-size: 1.8rem;
+  }
+  /* --------Profile------  */
+  .home {
+    .inputbox {
+      & .inputHome {
+        width: 280px;
+      }
     }
   }
 }
