@@ -140,12 +140,15 @@ p {
   & h1 {
     font-size: 3rem;
     margin-left: 2rem;
+    padding-left: 0.5rem;
+    border-left: 10px solid #b1b2b5;
+    border-radius: 0.5rem;
   }
 
   & p {
     font-size: 2.6rem;
     margin-top: 0;
-    margin-left: 2rem;
+    margin-left: 4rem;
     width: calc(100vw / 2.3);
     font-weight: 500;
   }
@@ -413,13 +416,29 @@ p {
 /* --------Smartphones------  */
 
 @media (max-width: 750px) {
+  /* --------Nav------  */
+  .header {
+    & .navbar {
+      gap: 0.3rem;
+    }
+    & .button-nav {
+      padding: 0.5rem;
+    }
+  }
+  .nav {
+    & p {
+      margin: 1rem;
+    }
+  }
+
   /* --------Mainpage------  */
+
   .mainpage {
     background-position: center;
     & .mainpage-content {
       padding-top: 10rem;
       & h1 {
-        width: 30rem;
+        width: 32rem;
       }
       & p {
         width: 28rem;
@@ -438,31 +457,24 @@ p {
         display: flex;
         flex-flow: column;
 
-        position: relative;
         border: 1px solid rgba(0, 0, 0, 0.205);
-        background-color: #f6f6f6;
-        padding: 3rem 1.5rem;
+        background-color: #f6f6f6ec;
+        padding: 1rem 1.5rem;
         margin: 1rem;
         border-radius: 2rem;
 
         & .textMainpage2 {
-          background-color: #f6f6f6;
-          padding: 0.5rem 1rem;
-          position: absolute;
-          top: -40px;
-          left: 20px;
-          border-radius: 1rem;
-          border-top: 1px solid rgba(0, 0, 0, 0.205);
+          border-radius: 0.5rem;
         }
         & h1 {
-          margin-left: 0;
+          margin: 0;
         }
       }
       & p {
-        width: 100%;
+        width: 96%;
         font-size: 2rem;
         padding-top: 1rem;
-        margin: 1rem;
+        margin: 1rem 0.2rem 1rem 1rem;
       }
     }
     & .right {
@@ -483,13 +495,13 @@ p {
     }
     & .right {
       width: 100vw;
-      padding-top: 8rem;
-      height: 91.5vh;
+      margin-top: 5rem;
+      height: 93vh;
       background-image: url(/imagens/login.jpg);
       background-position: center;
 
       & .container {
-        padding: 4rem 2rem 4rem 2rem;
+        padding: 3rem 2rem 1.5rem 2rem;
         background-color: #f6f6f6;
 
         & .texto {
@@ -506,52 +518,57 @@ p {
           & input {
             width: 75vw;
           }
-        }
-      }
-    }
-  }
 
-  /* --------Home------  */
-  .home {
-    & .left {
-      display: none;
-    }
-    & .right {
-      width: 100vw;
-      height: 91.5vh;
-      padding-top: 8rem;
-      background-image: url(/imagens/Home.jpg);
-      background-position: center;
-
-      & .containerInput {
-        background-color: #f6f6f6;
-        padding: 3rem 2rem 1rem 2rem;
-
-        & .profile {
-          border-radius: 1rem;
-          padding: 0.5rem 1rem;
-          border-top: 1px solid rgba(0, 0, 0, 0.205);
-        }
-
-        & .profileData {
-          & input {
-            width: 280px;
-          }
-          & p {
-            width: 290px;
+          & .inputUser:focus ~ .signIn,
+          .inputUser:valid ~ .signIn {
+            padding-top: 5rem;
           }
         }
       }
     }
-  }
-  & .inputHome {
-    font-size: 1.8rem;
-  }
-  /* --------Profile------  */
-  .home {
-    .inputbox {
-      & .inputHome {
-        width: 280px;
+
+    /* --------Home------  */
+    .home {
+      & .left {
+        display: none;
+      }
+      & .right {
+        width: 100vw;
+        height: 91.5vh;
+        padding-top: 8rem;
+        background-image: url(/imagens/Home.jpg);
+        background-position: center;
+
+        & .containerInput {
+          background-color: #f6f6f6;
+          padding: 3rem 2rem 1rem 2rem;
+
+          & .profile {
+            border-radius: 1rem;
+            padding: 0.5rem 1rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.205);
+          }
+
+          & .profileData {
+            & input {
+              width: 280px;
+            }
+            & p {
+              width: 290px;
+            }
+          }
+        }
+      }
+    }
+    & .inputHome {
+      font-size: 1.8rem;
+    }
+    /* --------Profile------  */
+    .home {
+      .inputbox {
+        & .inputHome {
+          width: 280px;
+        }
       }
     }
   }
