@@ -8,18 +8,37 @@
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
-          <p>LOGO</p>
+        <a href="/index/index.html">
+          <nav class="nav">
+            <p>LOGO</p>
+        </a>
           <div class="button-exit">
             <a href="/exit/exit.php"><span>Sair</span></a>
         </nav>
       </header>
-      <section>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1>Bem Vindo Administrador</h1>
-      </section>
+      <main>
+        <section class="sectionTitulo">
+          <div class="titleAdm">
+            <h1>Bem vindo a página do Gestor</h1>
+          </div>
+        </section>
+          <section class="mainpageAdm">
+            <div class="textAdm">
+              <h1>Resultados Principais da EDA</h1>
+              <p>Variáveis Numéricas</p>
+            </div>
+            <div class="containerGrafico">
+               <div class="grafico">
+                <img src="/imagens/graficoGestor/idade1.png" alt="grafico-idade" height="414px">
+                <img src="/imagens/graficoGestor/idade2.png" alt="grafico-idade">
+                <div class="legendaGrafico">
+                  <p class="legenda">idade_cliente: </p>
+                  <p class="textolegenda"> A população do dataset é composta majoritariamente por jovens e adultos entre 21 e 35 anos. <br>
+                    O maior grupo de clientes possui 23 anos com 3889 instâncias.</p>
+                </div>
+              </div>
+            </div> 
+          </section>
+      </main>
 </body>
 </html>
