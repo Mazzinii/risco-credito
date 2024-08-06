@@ -26,15 +26,95 @@
             <div class="textAdm">
               <h1>Resultados Principais da EDA</h1>
               <p>Variáveis Numéricas</p>
+              <br>
+              <br>
             </div>
             <div class="containerGrafico">
-               <div class="grafico">
-                <img src="/imagens/graficoGestor/idade1.png" alt="grafico-idade" height="414px">
+              <div class="grafico">
+                 <h1 class="tituloGrafico"><li>Idade</li></h1>
+                <img src="/imagens/graficoGestor/idade1.png" alt="grafico-idade" >
                 <img src="/imagens/graficoGestor/idade2.png" alt="grafico-idade">
                 <div class="legendaGrafico">
                   <p class="legenda">idade_cliente: </p>
                   <p class="textolegenda"> A população do dataset é composta majoritariamente por jovens e adultos entre 21 e 35 anos. <br>
                     O maior grupo de clientes possui 23 anos com 3889 instâncias.</p>
+                </div>
+              </div>
+            </div> 
+            <div class="containerGrafico">
+               <div class="grafico">
+                <h1 class="tituloGrafico"><li>Renda</li></h1>
+                <img src="/imagens/graficoGestor/renda1.png" alt="grafico-renda">
+                <img src="/imagens/graficoGestor/renda2.png" alt="grafico-renda">
+                <div class="legendaGrafico">
+                  <p class="legenda">renda_cliente: </p>
+                  <p class="textolegenda"> A quantidade de clientes que recebem MENOS que 135 mil por ano é o grupo predominante com 27.848 instâncias. <br>
+                    Enquanto os que recebem entre 135 a 500 mil são aproximadamente 1530 clientes.</p>
+                </div>
+              </div>
+            </div> 
+            <div class="containerGrafico">
+               <div class="grafico">
+                <h1 class="tituloGrafico"><li>Tempo Empregado</li></h1>
+                <img src="/imagens/graficoGestor/tempoEmprego1.png" alt="grafico-renda">
+                <img src="/imagens/graficoGestor/tempoEmprego2.png" alt="grafico-renda">
+                <div class="legendaGrafico">
+                  <p class="legenda">tempo_emprego_cliente: </p>
+                  <p class="textolegenda">A maior concentração de tempo empregatício que se encontra em tempo_emprego_cliente está entre 0 e 10 anos.<br>
+                    O valor máximo está em 40 anos trabalhados.</p>
+                </div>
+              </div>
+            </div> 
+            <div class="containerGrafico">
+               <div class="grafico">
+                <h1 class="tituloGrafico"><li>Valor Empréstimo</li></h1>
+                <img src="/imagens/graficoGestor/valorEmprestimo1.png" alt="grafico-renda">
+                <img src="/imagens/graficoGestor/valorEmprestimo2.png" alt="grafico-renda">
+                <div class="legendaGrafico">
+                  <p class="legenda">valor_emprestimo: </p>
+                  <p class="textolegenda">Os valores de empréstimos se concentram aproximadamente entre 2 mil e 15 mil.<br>
+                    O maior valor de empréstimo fornecido é de 35.000 para poucos clientes e não há outliers.</p>
+                </div>
+              </div>
+            </div> 
+            <div class="containerGrafico">
+               <div class="grafico">
+                <h1 class="tituloGrafico"><li>Taxa de Juros Empréstimo</li></h1>
+                <img src="/imagens/graficoGestor/taxaJuros1.png" alt="grafico-renda">
+                <img src="/imagens/graficoGestor/taxaJuros2.png" alt="grafico-renda">
+                <div class="legendaGrafico">
+                  <p class="legenda">taxa_juros_emprestimo: </p>
+                  <p class="textolegenda">A concentração de dados está em 7,5% e entre 10% a 15% de juros anual.<br>
+                    A taxa de juros do empréstimo mostra que há pelo menos um cliente com 23% de juros ao ano, que é a maior taxa. <br>
+                    A escala relativa de tempo não é conhecida, mas presumimos que está em anos.    
+                  </p>
+                </div>
+              </div>
+            </div> 
+            <div class="containerGrafico">
+               <div class="grafico">
+                <h1 class="tituloGrafico"><li>Percentual de Renda Empréstimo</li></h1>
+                <img src="/imagens/graficoGestor/rendaEmprestimo1.png" alt="grafico-renda">
+                <img src="/imagens/graficoGestor/rendaEmprestimo2.png" alt="grafico-renda">
+                <div class="legendaGrafico">
+                  <p class="legenda">percentual_renda_emprestimo: </p>
+                  <p class="textolegenda">A concentração dos dados se encontra entre 1% e 30%.<br>
+                    É possível visualizar que não há mais uma quantia considerável de clientes dentro da faixa de 0%.
+                  </p>
+                </div>
+              </div>
+            </div> 
+            <div class="containerGrafico">
+               <div class="grafico">
+                <h1 class="tituloGrafico"><li>Tempo de Crédito Empréstimo</li></h1>
+                <img src="/imagens/graficoGestor/tempoCredito1.png" alt="grafico-renda">
+                <img src="/imagens/graficoGestor/tempoCredito2.png" alt="grafico-renda">
+                <div class="legendaGrafico">
+                  <p class="legenda">percentual_renda_emprestimo: </p>
+                  <p class="textolegenda">Metade do dataset está entre 0 e 5 anos e 1/3 do dataset está entre 5 e 10 anos de tempo de crédito do cliente.<br>
+                    O valor máximo está em aproximadamente 30 anos. Assumimos que não há outliers neste contexto. <br>
+                    Não sabemos a escala relativa de tempo, mas supomos que está em anos.
+                  </p>
                 </div>
               </div>
             </div> 
