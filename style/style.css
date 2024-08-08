@@ -462,6 +462,11 @@ p {
     border-left: 10px solid #b1b2b5;
     border-radius: 0.5rem;
   }
+
+  & span {
+    font-size: 2rem;
+    margin: 0 0 8rem 10rem;
+  }
 }
 
 .containerGrafico {
@@ -482,7 +487,7 @@ p {
 
   & .grafico {
     border: 1px solid black;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.795);
     position: relative;
   }
 
@@ -491,9 +496,13 @@ p {
     height: auto;
   }
 
+  & .imgCategorico {
+    width: 325px;
+  }
+
   & .legendaGrafico {
     display: flex;
-    align-items: left;
+    align-items: center;
     margin-left: 2rem;
 
     & .legenda {
@@ -504,6 +513,9 @@ p {
     & .textolegenda {
       width: calc(100vw / 2);
     }
+  }
+  & .legendaGraficoCategorico {
+    border-top: 1px solid black;
   }
 }
 
@@ -684,10 +696,15 @@ p {
       font-size: 2rem;
       margin-left: 1.5rem;
     }
+    & span {
+      font-size: 1.8rem;
+      margin-left: 1.5rem;
+      margin-bottom: 5rem;
+    }
   }
   .containerGrafico {
     flex-direction: column;
-    margin-bottom: 7rem;
+    margin-bottom: 6rem;
 
     & .tituloGrafico {
       font-size: 1.9rem;
@@ -700,6 +717,9 @@ p {
     }
     & img {
       min-width: 340px;
+    }
+    .imgCategorico {
+      margin-left: 0.5rem;
     }
 
     & .legendaGrafico {
